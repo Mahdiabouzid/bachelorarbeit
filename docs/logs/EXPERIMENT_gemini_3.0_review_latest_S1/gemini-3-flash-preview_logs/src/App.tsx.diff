@@ -1,0 +1,29 @@
+--- ..\app_template\react-app\src\App.tsx (original)
++++ ..\app_template\react-app\src\App.tsx (modified)
+@@ -19,9 +19,24 @@
+             </Layout>
+           }
+         />
+-        <Route path="/pricing" element={<PricingPage />} />
+-        <Route path="/contact" element={<ContactPage />} />
++        <Route
++          path="/pricing"
++          element={
++            <Layout>
++              <PricingPage />
++            </Layout>
++          }
++        />
++        <Route
++          path="/contact"
++          element={
++            <Layout>
++              <ContactPage />
++            </Layout>
++          }
++        />
+       </Routes>
++
+       <ToastContainer
+         position="bottom-right"
+         autoClose={5000}

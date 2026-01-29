@@ -1,0 +1,16 @@
+{
+  "name": "NordOak E-commerce",
+  "short_name": "NordOak",
+  "description": "Premium furniture for modern living.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4299e1",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

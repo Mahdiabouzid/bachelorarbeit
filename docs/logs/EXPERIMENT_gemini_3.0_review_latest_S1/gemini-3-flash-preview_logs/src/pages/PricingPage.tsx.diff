@@ -1,0 +1,31 @@
+--- ..\app_template\react-app\src\pages\PricingPage.tsx (original)
++++ ..\app_template\react-app\src\pages\PricingPage.tsx (modified)
+@@ -1,6 +1,6 @@
+ import React, { useState } from 'react';
+-import Layout from '../components/Layout';
+ import BillingToggle from '../components/Pricing/BillingToggle';
++
+ import PricingCard from '../components/Pricing/PricingCard';
+ 
+ const PricingPage: React.FC = () => {
+@@ -49,8 +49,8 @@
+   ];
+ 
+   return (
+-    <Layout>
+-      <div className="bg-gray-50 py-24 sm:py-32">
++    <div className="bg-gray-50 py-24 sm:py-32">
++
+         <div className="mx-auto max-w-7xl px-6 lg:px-8">
+           <div className="mx-auto max-w-4xl text-center">
+             <h2 className="text-base font-semibold leading-7 text-indigo-600">Pricing</h2>
+@@ -81,8 +81,8 @@
+           </div>
+         </div>
+       </div>
+-    </Layout>
+   );
+ };
+ 
++
+ export default PricingPage;

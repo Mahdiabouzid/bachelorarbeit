@@ -1,0 +1,15 @@
+--- ..\app_template\react-app\src\pages\HomePage.tsx (original)
++++ ..\app_template\react-app\src\pages\HomePage.tsx (modified)
+@@ -40,10 +40,11 @@
+             {t('home.subheading')}
+           </p>
+           <Link to="/gallery">
+-            <Button size="lg" className="text-lg px-8 py-4">
++            <Button className="text-lg px-8 py-4">
+               {t('home.cta')}
+             </Button>
+           </Link>
++
+         </div>
+       </section>
+ 

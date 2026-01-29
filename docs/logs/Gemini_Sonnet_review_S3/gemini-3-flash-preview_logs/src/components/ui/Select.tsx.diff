@@ -1,0 +1,33 @@
+--- ..\app_template\react-app\src\components\ui\Select.tsx (original)
++++ ..\app_template\react-app\src\components\ui\Select.tsx (modified)
+@@ -1,20 +1,25 @@
+ import { SelectHTMLAttributes } from 'react';
+ 
+ interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
+-  label: string;
++  label?: string;
+   options: { value: string; label: string }[];
++  'aria-label'?: string;
+ }
+ 
+-const Select = ({ label, options, className, ...props }: SelectProps) => {
++const Select = ({ label, options, className, 'aria-label': ariaLabel, ...props }: SelectProps) => {
+   return (
+     <div className="flex flex-col gap-1">
+-      <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
+-        {label}
+-      </label>
++      {label && (
++        <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
++          {label}
++        </label>
++      )}
+       <select
++        aria-label={ariaLabel}
+         className={`block w-full rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow-sm focus:border-[var(--color-accent-primary)] focus:ring-[var(--color-accent-primary)] sm:text-sm ${className}`}
+         {...props}
+       >
++
+         {options.map((opt) => (
+           <option key={opt.value} value={opt.value}>
+             {opt.label}

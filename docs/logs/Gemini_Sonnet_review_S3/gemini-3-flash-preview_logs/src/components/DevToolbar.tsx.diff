@@ -1,0 +1,12 @@
+--- ..\app_template\react-app\src\components\DevToolbar.tsx (original)
++++ ..\app_template\react-app\src\components\DevToolbar.tsx (modified)
+@@ -13,7 +13,9 @@
+         checked={isOffline}
+         onChange={setIsOffline}
+         data-testid="offline-toggle"
++        aria-label="Offline mode"
+       />
++
+       {isOffline && (
+         <span className="text-xs font-bold uppercase tracking-wider text-red-400">
+           {t('common.offlineEnabled')}

@@ -1,0 +1,28 @@
+------------------- Coder Errors -------------------
+ - Step: step-5 Attempt 0
+ - TSC errors: SEARCH block not found in original content. Excerpt: import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+
+function App() {
+  const [count, setCount] = useState(0)
+
+  return (
+  ...
+ - Error Files: ['src/App.tsx']
+---
+------------------- Review Feedback -------------------
+ - Step: 5 Round: 1
+ - Review Json: {}
+ - Files to revise: ['src/App.tsx']
+---
+------------------- REQUEST SUMMARY -------------------
+Request: Build a 3-page React app with routes /, /pricing, /contact: * Header (shared on all pages) * A clickable logo/link with accessible name “PRIM-Agency” that navigates to /. * Primary nav links labeled Home, Pricing, Contact pointing to /, /pricing, /contact. * A mobile hamburger button that opens a slide-over menu. * Hamburger button has an accessible name like “Open menu” * Slide-over behaves like a dialog with a close button labeled “Close menu”. * Footer (shared) * Small sitemap links to Home, Pricing, Contact and at least 2 social links (e.g. Twitter, LinkedIn). Social links must have accessible names. * Pricing page * Contains exactly 3 pricing plan cards with plan names: Basic, Pro, Enterprise. * Each plan card shows a price and a CTA button/link with accessible name (e.g. “Get Started with Basic”). * Include a billing period toggle that switches between Monthly and Yearly pricing. * The toggle must be keyboard operable and have an accessible name containing “Billing”, “Monthly/Yearly”, or “Pricing period”. * Use these prices: * Basic: $10/month, $96/year * Pro: $20/month, $192/year * Enterprise: $40/month, $384/year * Mark Pro as the recommended plan with a visible badge containing the word “Recommended”. * Contact page * Client-side validated form with inputs: Name, Email, Message and a Submit button. * Validation rules: * Name required * Email required + valid email format * Message required (min 10 characters) * Show inline error messages next to each invalid field. * Invalid fields must be indicated accessibly * On successful submit, show a toast/notification with the text “Message sent successfully”
+Planner Total Token Usage: 25384
+Coder Total Token Usage: 70355
+Total Token Usage to Complete Request: 95739
+Total Time Taken: 00:03:34 seconds
+Total Cost: 0.09863 USD
+-------------------------------------------------------
+

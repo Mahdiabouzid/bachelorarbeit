@@ -1,0 +1,23 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Layout from "./components/Layout";
+import HomePage from "./pages/HomePage";
+import PricingPage from "./pages/PricingPage";
+import ContactPage from "./pages/ContactPage";
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="pricing" element={<PricingPage />} />
+          <Route path="contact" element={<ContactPage />} />
+        </Route>
+      </Routes>
+      <ToastContainer position="bottom-right" />
+    </BrowserRouter>
+  );
+}
+

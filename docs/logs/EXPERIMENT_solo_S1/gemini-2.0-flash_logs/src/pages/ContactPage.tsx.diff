@@ -1,0 +1,64 @@
+--- ..\app_template\react-app\src\pages\ContactPage.tsx (original)
++++ ..\app_template\react-app\src\pages\ContactPage.tsx (modified)
+@@ -1,12 +1,22 @@
+-import { useForm } from 'react-hook-form';
++import { useForm, FieldError } from 'react-hook-form';
++import { ReactNode } from 'react';
++
+ import { toast } from 'react-toastify';
+ 
++interface FormData {
++  name: string;
++  email: string;
++  message: string;
++}
++
+ const ContactPage = () => {
+-  const { register, handleSubmit, formState: { errors } } = useForm();
+ 
+-  const onSubmit = (data) => {
++  const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
++
++  const onSubmit = (data: FormData) => {
+     console.log(data);
+     toast.success('Message sent successfully');
++
+   };
+ 
+   return (
+@@ -22,9 +32,10 @@
+             {...register('name', { required: 'Name is required' })}
+             aria-invalid={errors.name ? 'true' : 'false'}
+           />
+-          {errors.name && <p className="text-red-500 text-xs italic">{errors.name.message}</p>}
++          {errors.name && <p className="text-red-500 text-xs italic">{errors.name.message as ReactNode}</p>}
+         </div>
+         <div className="mb-4">
++
+           <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Email</label>
+           <input
+             type="email"
+@@ -36,9 +47,10 @@
+             })}
+             aria-invalid={errors.email ? 'true' : 'false'}
+           />
+-          {errors.email && <p className="text-red-500 text-xs italic">{errors.email.message}</p>}
++          {errors.email && <p className="text-red-500 text-xs italic">{errors.email.message as ReactNode}</p>}
+         </div>
+         <div className="mb-6">
++
+           <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">Message</label>
+           <textarea
+             id="message"
+@@ -46,9 +58,10 @@
+             {...register('message', { required: 'Message is required', minLength: { value: 10, message: 'Message must be at least 10 characters' } })}
+             aria-invalid={errors.message ? 'true' : 'false'}
+           />
+-          {errors.message && <p className="text-red-500 text-xs italic">{errors.message.message}</p>}
++          {errors.message && <p className="text-red-500 text-xs italic">{errors.message.message as ReactNode}</p>}
+         </div>
+         <button className="bg-black text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Submit</button>
++
+       </form>
+     </div>
+   );

@@ -1,0 +1,13 @@
+--- ..\app_template\react-app\src\pages\Settings.tsx (original)
++++ ..\app_template\react-app\src\pages\Settings.tsx (modified)
+@@ -1,7 +1,8 @@
+ import { useAppContext } from '../context/AppContext';
+-import en from '../i18n/en';
+-import de from '../i18n/de';
++import { en } from '../i18n/en';
++import { de } from '../i18n/de';
+ import { Theme, Accent, Language } from '../types';
++
+ 
+ const Settings = () => {
+   const { 

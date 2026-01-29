@@ -1,0 +1,31 @@
+--- ..\app_template\react-app\src\pages\PricingPage.tsx (original)
++++ ..\app_template\react-app\src\pages\PricingPage.tsx (modified)
+@@ -40,22 +40,27 @@
+           price={isMonthly ? basicPriceMonthly : basicPriceYearly}
+           billingPeriod={isMonthly ? 'month' : 'year'}
+           ctaLabel="Get Started with Basic"
++          isRecommended={false}
+         />
+         <PricingCard
++
+           planName="Pro"
+           price={isMonthly ? proPriceMonthly : proPriceYearly}
+           billingPeriod={isMonthly ? 'month' : 'year'}
+           ctaLabel="Get Started with Pro"
+-          isRecommended
++          isRecommended={true}
+         />
+         <PricingCard
++
+           planName="Enterprise"
+           price={isMonthly ? enterprisePriceMonthly : enterprisePriceYearly}
+           billingPeriod={isMonthly ? 'month' : 'year'}
+           ctaLabel="Get Started with Enterprise"
++          isRecommended={false}
+         />
+       </div>
+     </div>
++
+   );
+ };
+ 

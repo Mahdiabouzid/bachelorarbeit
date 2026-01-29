@@ -1,0 +1,14 @@
+--- ..\app_template\react-app\src\pages\Gallery.tsx (original)
++++ ..\app_template\react-app\src\pages\Gallery.tsx (modified)
+@@ -3,8 +3,9 @@
+ import { galleryData } from '../data/gallery';
+ import FilterBar from '../components/Gallery/FilterBar';
+ import GalleryTile from '../components/Gallery/GalleryTile';
+-import en from '../i18n/en';
+-import de from '../i18n/de';
++import { en } from '../i18n/en';
++import { de } from '../i18n/de';
++
+ 
+ const Gallery: React.FC = () => {
+   const { language, isOffline } = useAppContext();

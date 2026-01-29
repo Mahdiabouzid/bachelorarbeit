@@ -1,0 +1,36 @@
+--- ..\app_template\react-app\src\components\About.tsx (original)
++++ ..\app_template\react-app\src\components\About.tsx (modified)
+@@ -1,12 +1,10 @@
+ import React, { useEffect, useRef, useState } from 'react';
+ import {
+-  SiAdobeillustrator,
+-  SiAdobephotoshop,
++  SiAdobe,
+   SiFigma,
+-  SiAdobexd,
+-  SiAdobeindesign,
+   SiSketch
+ } from '@icons-pack/react-simple-icons';
++
+ import { aboutText } from '../utils/data';
+ 
+ const About: React.FC = () => {
+@@ -35,13 +33,14 @@
+   }, []);
+ 
+   const tools = [
+-    { name: 'Adobe Illustrator', Icon: SiAdobeillustrator },
+-    { name: 'Adobe Photoshop', Icon: SiAdobephotoshop },
++    { name: 'Adobe Illustrator', Icon: SiAdobe },
++    { name: 'Adobe Photoshop', Icon: SiAdobe },
+     { name: 'Figma', Icon: SiFigma },
+-    { name: 'Adobe XD', Icon: SiAdobexd },
+-    { name: 'InDesign', Icon: SiAdobeindesign },
++    { name: 'Adobe XD', Icon: SiAdobe },
++    { name: 'InDesign', Icon: SiAdobe },
+     { name: 'Sketch', Icon: SiSketch }
+   ];
++
+ 
+   return (
+     <section

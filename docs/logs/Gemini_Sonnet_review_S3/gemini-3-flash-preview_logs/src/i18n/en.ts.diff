@@ -1,0 +1,23 @@
+--- ..\app_template\react-app\src\i18n\en.ts (original)
++++ ..\app_template\react-app\src\i18n\en.ts (modified)
+@@ -38,10 +38,18 @@
+   },
+   about: {
+     title: 'About Lumen',
+-    mission: 'Our mission is to preserve your most precious moments.',
++    mission: 'Our mission is to preserve your most precious moments through high-quality digital storage and seamless sharing experiences.',
++    values: 'We value privacy, artistic integrity, and the power of visual storytelling. Every pixel matters to us because every memory matters to you.',
+     story: 'Our Story',
+-    team: 'Meet the Team'
++    storyContent: 'Founded in 2023, Lumen started as a small project among photographers who wanted a better way to showcase their work without compromising on quality. Today, we serve thousands of users worldwide.',
++    team: 'Meet the Team',
++    members: {
++      ceo: { name: 'Sarah Jenkins', role: 'Founder & CEO' },
++      cto: { name: 'Marcus Chen', role: 'Chief Technology Officer' },
++      design: { name: 'Elena Rodriguez', role: 'Head of Design' }
++    }
+   },
++
+   settings: {
+     title: 'Settings',
+     themeLabel: 'Theme',

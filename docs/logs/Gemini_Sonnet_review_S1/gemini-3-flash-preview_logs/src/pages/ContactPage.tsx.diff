@@ -1,0 +1,13 @@
+--- ..\app_template\react-app\src\pages\ContactPage.tsx (original)
++++ ..\app_template\react-app\src\pages\ContactPage.tsx (modified)
+@@ -34,8 +34,9 @@
+     console.log('Form Data:', data);
+     await new Promise((resolve) => setTimeout(resolve, 1000));
+     
+-    toast.success('Message sent successfully!', {
++    toast.success('Message sent successfully', {
+       position: 'top-right',
++
+       autoClose: 5000,
+       hideProgressBar: false,
+       closeOnClick: true,

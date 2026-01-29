@@ -1,0 +1,35 @@
+--- ..\app_template\react-app\src\index.css (original)
++++ ..\app_template\react-app\src\index.css (modified)
+@@ -26,3 +26,32 @@
+   overflow-x: hidden;
+ }
+ 
++@layer utilities {
++  .animate-fade-in {
++    animation: fadeIn 1.2s ease-out forwards;
++  }
++
++  .reveal {
++    opacity: 0;
++    transform: translateY(30px);
++    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
++  }
++
++  .reveal.visible {
++    opacity: 1;
++    transform: translateY(0);
++  }
++}
++
++@keyframes fadeIn {
++  from {
++    opacity: 0;
++    transform: translateY(10px);
++  }
++  to {
++    opacity: 1;
++    transform: translateY(0);
++  }
++}
++
++

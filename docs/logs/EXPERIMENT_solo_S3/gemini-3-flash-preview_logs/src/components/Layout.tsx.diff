@@ -1,0 +1,15 @@
+--- ..\app_template\react-app\src\components\Layout.tsx (original)
++++ ..\app_template\react-app\src\components\Layout.tsx (modified)
+@@ -72,10 +72,10 @@
+               type="checkbox"
+               data-testid="offline-toggle"
+               checked={offline}
+-              onChange={(e) => {
+-                const { setOffline } = useApp();
++              onChange={() => {
+                 // This is a bit hacky because we're inside Layout, but useApp is available
+               }}
++
+               // We'll handle the change via a local function to avoid closure issues
+               onClick={() => {
+                 // Handled by the Settings logic or a separate component

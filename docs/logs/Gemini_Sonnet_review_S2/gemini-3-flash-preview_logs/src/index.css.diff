@@ -1,0 +1,46 @@
+--- ..\app_template\react-app\src\index.css (original)
++++ ..\app_template\react-app\src\index.css (modified)
+@@ -2,8 +2,31 @@
+ 
+ @custom-variant dark (&:where(.dark, .dark *));
+ 
++html {
++  scroll-behavior: smooth;
++}
++
++/* Custom Scrollbar */
++::-webkit-scrollbar {
++  width: 8px;
++}
++
++::-webkit-scrollbar-track {
++  background: #000;
++}
++
++::-webkit-scrollbar-thumb {
++  background: #D4AF37;
++  border-radius: 4px;
++}
++
++::-webkit-scrollbar-thumb:hover {
++  background: #b8962d;
++}
++
+ :root {
+   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
++
+   line-height: 1.5;
+   font-weight: 400;
+   color-scheme: light;
+@@ -18,8 +41,7 @@
+ 
+ body {
+   margin: 0;
+-  justify-content: center;
+-  align-items: center;
+-  width: 100vw;
+-  height: 100vh;
++  width: 100%;
++  overflow-x: hidden;
+ }
++

@@ -1,0 +1,12 @@
+--- ..\app_template\react-app\src\pages\PricingPage.tsx (original)
++++ ..\app_template\react-app\src\pages\PricingPage.tsx (modified)
+@@ -72,7 +72,9 @@
+                 features={plan.features}
+                 isRecommended={plan.isRecommended}
+                 onCTAClick={() => console.log(`Selected ${plan.name} plan`)}
++                ctaAriaLabel={`Get Started with ${plan.name}`}
+               />
++
+             ))}
+           </div>
+         </div>

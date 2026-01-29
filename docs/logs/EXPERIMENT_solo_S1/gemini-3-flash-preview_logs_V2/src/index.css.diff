@@ -1,0 +1,14 @@
+--- ..\app_template\react-app\src\index.css (original)
++++ ..\app_template\react-app\src\index.css (modified)
+@@ -18,8 +18,7 @@
+ 
+ body {
+   margin: 0;
+-  justify-content: center;
+-  align-items: center;
+-  width: 100vw;
+-  height: 100vh;
++  min-height: 100vh;
++  background-color: #f9fafb;
+ }
++

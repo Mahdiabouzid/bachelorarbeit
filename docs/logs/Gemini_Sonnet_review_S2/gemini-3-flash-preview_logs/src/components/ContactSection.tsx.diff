@@ -1,0 +1,33 @@
+--- ..\app_template\react-app\src\components\ContactSection.tsx (original)
++++ ..\app_template\react-app\src\components\ContactSection.tsx (modified)
+@@ -60,11 +60,15 @@
+           </div>
+         </div>
+ 
+-        <form 
++        <div 
+           ref={rightRef}
+-          onSubmit={handleSubmit(onSubmit)} 
+-          className={`space-y-6 transition-all duration-1000 transform ${rightVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[50px]'}`}
++          className={`transition-all duration-1000 transform ${rightVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[50px]'}`}
+         >
++          <form 
++            onSubmit={handleSubmit(onSubmit)} 
++            className="space-y-6"
++          >
++
+           <div>
+ 
+             <label htmlFor="name" className="block text-sm font-bold uppercase tracking-wider mb-2">
+@@ -120,8 +124,10 @@
+           >
+             {isSubmitting ? 'Sending...' : 'Send Message'}
+           </Button>
+-        </form>
++          </form>
++        </div>
+       </div>
++
+     </SectionContainer>
+   );
+ };

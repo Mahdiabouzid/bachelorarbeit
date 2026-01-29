@@ -1,0 +1,33 @@
+--- ..\app_template\react-app\src\components\PricingCard.tsx (original)
++++ ..\app_template\react-app\src\components\PricingCard.tsx (modified)
+@@ -9,6 +9,7 @@
+   features: string[];
+   isRecommended?: boolean;
+   onCTAClick?: () => void;
++  ctaAriaLabel?: string;
+ }
+ 
+ const PricingCard: React.FC<PricingCardProps> = ({ 
+@@ -17,8 +18,10 @@
+   period, 
+   features, 
+   isRecommended, 
+-  onCTAClick 
++  onCTAClick,
++  ctaAriaLabel
+ }) => {
++
+   return (
+     <div className={`relative flex flex-col p-8 bg-white border rounded-2xl shadow-sm transition-transform hover:scale-105 ${isRecommended ? 'border-blue-500 ring-2 ring-blue-500 ring-opacity-50' : 'border-gray-200'}`}>
+       {isRecommended && (
+@@ -45,8 +48,9 @@
+         variant={isRecommended ? 'primary' : 'outline'} 
+         className="w-full" 
+         onClick={onCTAClick}
+-        aria-label={`Get Started with ${plan}`}
++        aria-label={ctaAriaLabel || `Get Started with ${plan}`}
+       >
++
+         Get Started
+       </Button>
+     </div>

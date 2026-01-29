@@ -1,0 +1,52 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - navigation [ref=e5]:
+      - generic [ref=e6]:
+        - link "Lumen" [ref=e7] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e8]:
+          - link "Home" [ref=e9] [cursor=pointer]:
+            - /url: /
+          - link "Gallery" [ref=e10] [cursor=pointer]:
+            - /url: /gallery
+          - link "Upload" [ref=e11] [cursor=pointer]:
+            - /url: /upload
+          - link "About" [ref=e12] [cursor=pointer]:
+            - /url: /about
+          - link "Settings" [ref=e13] [cursor=pointer]:
+            - /url: /settings
+      - combobox "Language" [ref=e16]:
+        - option "English" [selected]
+        - option "Deutsch"
+    - dialog "Mobile Navigation Menu" [ref=e17]:
+      - generic [ref=e18]:
+        - heading "Mobile Navigation Menu" [level=2] [ref=e19]
+        - button "Close menu" [ref=e21]:
+          - img [ref=e22]
+        - navigation [ref=e24]:
+          - link "Home" [ref=e25] [cursor=pointer]:
+            - /url: /
+          - link "Gallery" [ref=e26] [cursor=pointer]:
+            - /url: /gallery
+          - link "Upload" [ref=e27] [cursor=pointer]:
+            - /url: /upload
+          - link "About" [ref=e28] [cursor=pointer]:
+            - /url: /about
+          - link "Settings" [ref=e29] [cursor=pointer]:
+            - /url: /settings
+  - main [ref=e31]:
+    - generic [ref=e32]:
+      - heading "Upload Photo" [level=1] [ref=e33]
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - generic [ref=e37]: Choose photo file
+          - button "Choose photo file" [ref=e38] [cursor=pointer]
+        - button "Upload" [disabled] [ref=e40]
+        - paragraph [ref=e41]: This is a demo - uploads are not functional
+  - generic [ref=e43] [cursor=pointer]:
+    - generic [ref=e44] [cursor=pointer]: Offline simulation
+    - checkbox "Offline mode" [ref=e46]
+```

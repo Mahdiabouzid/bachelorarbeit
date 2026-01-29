@@ -1,0 +1,45 @@
+--- ..\app_template\react-app\src\components\PortfolioSection.tsx (original)
++++ ..\app_template\react-app\src\components\PortfolioSection.tsx (modified)
+@@ -3,8 +3,11 @@
+ import ProjectCard from './ProjectCard';
+ import ProjectModal from './ProjectModal';
+ import { projects, Project } from '../data/portfolioData';
++import useScrollAnimation from '../hooks/useScrollAnimation';
+ 
+ const PortfolioSection: React.FC = () => {
++  const { elementRef, isVisible } = useScrollAnimation(0.1);
++
+   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+   const [isModalOpen, setIsModalOpen] = useState(false);
+ 
+@@ -20,15 +23,24 @@
+         <h3 className="text-4xl md:text-5xl font-bold text-white">Selected Works</h3>
+       </div>
+ 
+-      <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+-        {projects.map((project) => (
+-          <ProjectCard 
++      <div 
++        ref={elementRef}
++        className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6"
++      >
++        {projects.map((project, index) => (
++          <div 
+             key={project.id} 
+-            project={project} 
+-            onClick={handleProjectClick} 
+-          />
++            className={`transition-all duration-700 transform ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}
++            style={{ transitionDelay: `${index * 100}ms` }}
++          >
++            <ProjectCard 
++              project={project} 
++              onClick={handleProjectClick} 
++            />
++          </div>
+         ))}
+       </div>
++
+ 
+       <ProjectModal 
+         project={selectedProject} 

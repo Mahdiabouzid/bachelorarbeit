@@ -1,0 +1,37 @@
+import React from 'react';
+import SectionContainer from './SectionContainer';
+import ServiceCard from './ServiceCard';
+import { services } from '../data/portfolioData';
+import useScrollAnimation from '../hooks/useScrollAnimation';
+
+const ServicesSection: React.FC = () => {
+  const { elementRef, isVisible } = useScrollAnimation(0.2);
+
+  return (
+    <SectionContainer id="services" backgroundColor="dark-gray">
+
+      <div className="text-center mb-16">
+        <h2 className="text-[#D4AF37] text-sm font-bold tracking-widest uppercase mb-4">Services</h2>
+        <h3 className="text-4xl md:text-5xl font-bold text-white">What I Offer</h3>
+      </div>
+
+      <div 
+        ref={elementRef}
+        className="grid md:grid-cols-3 gap-8"
+      >
+        {services.map((service, index) => (
+          <div 
+            key={service.id}
+            className={`transition-all duration-700 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            style={{ transitionDelay: `${index * 150}ms` }}
+          >
+            <ServiceCard service={service} />
+          </div>
+        ))}
+      </div>
+
+    </SectionContainer>
+  );
+};
+
+export default ServicesSection;

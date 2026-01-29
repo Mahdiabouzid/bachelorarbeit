@@ -1,0 +1,14 @@
+{
+  "name": "pokio-benchmark-tests",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:a11y": "playwright test -g '@a11y'",
+    "test:responsive": "playwright test -g '@responsive'"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "@playwright/test": "^1.47.2",
+    "@types/node": "^24.6.1"
+  }
+}

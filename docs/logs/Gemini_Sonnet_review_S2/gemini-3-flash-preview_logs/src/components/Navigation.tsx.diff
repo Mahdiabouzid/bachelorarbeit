@@ -1,0 +1,48 @@
+--- ..\app_template\react-app\src\components\Navigation.tsx (original)
++++ ..\app_template\react-app\src\components\Navigation.tsx (modified)
+@@ -14,24 +14,30 @@
+   const [activeSection, setActiveSection] = useState('hero');
+ 
+   useEffect(() => {
+-    const handleScroll = () => {
+-      const sections = navLinks.map(link => link.href.substring(1));
+-      const scrollPosition = window.scrollY + 100;
+-
+-      for (const section of sections) {
+-        const element = document.getElementById(section);
+-        if (element && 
+-            scrollPosition >= element.offsetTop && 
+-            scrollPosition < element.offsetTop + element.offsetHeight) {
+-          setActiveSection(section);
+-          break;
+-        }
+-      }
++    const observerOptions = {
++      root: null,
++      rootMargin: '-20% 0px -70% 0px',
++      threshold: 0,
+     };
+ 
+-    window.addEventListener('scroll', handleScroll);
+-    return () => window.removeEventListener('scroll', handleScroll);
++    const observerCallback = (entries: IntersectionObserverEntry[]) => {
++      entries.forEach((entry) => {
++        if (entry.isIntersecting) {
++          setActiveSection(entry.target.id);
++        }
++      });
++    };
++
++    const observer = new IntersectionObserver(observerCallback, observerOptions);
++    
++    navLinks.forEach((link) => {
++      const element = document.getElementById(link.href.substring(1));
++      if (element) observer.observe(element);
++    });
++
++    return () => observer.disconnect();
+   }, []);
++
+ 
+   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+     e.preventDefault();

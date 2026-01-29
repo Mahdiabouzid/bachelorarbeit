@@ -1,0 +1,23 @@
+--- ..\app_template\react-app\src\i18n\de.ts (original)
++++ ..\app_template\react-app\src\i18n\de.ts (modified)
+@@ -38,10 +38,18 @@
+   },
+   about: {
+     title: 'Über Lumen',
+-    mission: 'Unsere Mission ist es, Ihre kostbarsten Momente zu bewahren.',
++    mission: 'Unsere Mission ist es, Ihre kostbarsten Momente durch hochwertige digitale Speicherung und nahtlose Sharing-Erlebnisse zu bewahren.',
++    values: 'Wir schätzen Privatsphäre, künstlerische Integrität und die Kraft des visuellen Geschichtenerzählens. Jedes Pixel ist uns wichtig, weil jede Erinnerung Ihnen wichtig ist.',
+     story: 'Unsere Geschichte',
+-    team: 'Unser Team'
++    storyContent: 'Lumen wurde 2023 als kleines Projekt von Fotografen gegründet, die ihre Arbeit besser präsentieren wollten, ohne Kompromisse bei der Qualität einzugehen. Heute bedienen wir Tausende von Nutzern weltweit.',
++    team: 'Unser Team',
++    members: {
++      ceo: { name: 'Sarah Jenkins', role: 'Gründerin & CEO' },
++      cto: { name: 'Marcus Chen', role: 'Technischer Leiter' },
++      design: { name: 'Elena Rodriguez', role: 'Design-Leiterin' }
++    }
+   },
++
+   settings: {
+     title: 'Einstellungen',
+     themeLabel: 'Thema',

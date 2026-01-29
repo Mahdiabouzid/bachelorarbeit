@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  color: #000;
+  background-color: #fff;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.accent-ocean {
+  --accent-primary: #0ea5e9;
+  --accent-hover: #0284c7;
+}
+
+.accent-sunset {
+  --accent-primary: #f43f5e;
+  --accent-hover: #e11d48;
+}
+
+.accent-forest {
+  --accent-primary: #10b981;
+  --accent-hover: #059669;
+}
+
+.bg-accent {
+  background-color: var(--accent-primary);
+}
+
+.text-accent {
+  color: var(--accent-primary);
+}
+
+.border-accent {
+  border-color: var(--accent-primary);
+}
+

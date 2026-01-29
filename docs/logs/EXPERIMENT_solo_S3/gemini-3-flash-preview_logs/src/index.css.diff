@@ -1,0 +1,40 @@
+--- ..\app_template\react-app\src\index.css (original)
++++ ..\app_template\react-app\src\index.css (modified)
+@@ -18,8 +18,33 @@
+ 
+ body {
+   margin: 0;
+-  justify-content: center;
+-  align-items: center;
+-  width: 100vw;
+-  height: 100vh;
++  min-height: 100vh;
+ }
++
++.accent-ocean {
++  --accent-primary: #0ea5e9;
++  --accent-hover: #0284c7;
++}
++
++.accent-sunset {
++  --accent-primary: #f43f5e;
++  --accent-hover: #e11d48;
++}
++
++.accent-forest {
++  --accent-primary: #10b981;
++  --accent-hover: #059669;
++}
++
++.bg-accent {
++  background-color: var(--accent-primary);
++}
++
++.text-accent {
++  color: var(--accent-primary);
++}
++
++.border-accent {
++  border-color: var(--accent-primary);
++}
++
